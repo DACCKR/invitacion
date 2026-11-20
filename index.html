@@ -109,14 +109,15 @@
       <div id="envFlap" class="absolute inset-x-0 top-0 z-10 h-1/2 rounded-t-lg"
            style="clip-path:polygon(0 0,100% 0,50% 100%);background:linear-gradient(180deg,#ffffff 0%,#eef2e4 100%);filter:drop-shadow(0 6px 12px rgba(85,107,47,.18))"></div>
 
+      <!-- Sello del sobre con monograma corregido -->
       <div id="envSeal" class="absolute left-1/2 top-1/2 z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-500 sm:h-20 sm:w-20"
            style="background:radial-gradient(circle at 34% 28%, #9c7a45 0%, #556b2f 62%, #3b4a23 100%);box-shadow:0 10px 26px -10px rgba(0,0,0,.65), inset 0 0 0 3px rgba(255,255,255,.14), inset 0 0 22px rgba(0,0,0,.35)">
-        <span class="font-script text-xl leading-none text-cream/95 sm:text-2xl whitespace-nowrap pb-1">M&amp;D</span>
+        <span class="font-script text-[1.2rem] leading-none text-cream/95 sm:text-2xl whitespace-nowrap pt-1">M &amp; D</span>
       </div>
     </div>
   </div>
 
-  <!-- Botón (se eliminó el texto y el número "2" que estaba aquí) -->
+  <!-- Botón (se eliminó el texto y el número "2") -->
   <button id="openBtn" type="button"
           class="pulse-ring group relative mt-10 inline-flex items-center gap-2 rounded-full border border-sage-600/40 bg-white/80 px-6 py-3.5 font-sans text-[9px] uppercase tracking-[0.2em] text-sage-700 shadow-sm backdrop-blur transition hover:bg-sage-600 hover:text-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 sm:mt-12 sm:px-9 sm:py-4 sm:text-[11px]">
     <span>Click para abrir la invitación</span>
@@ -135,9 +136,9 @@
     <svg class="pointer-events-none absolute -bottom-6 -right-8 w-32 text-sage-300/60 sm:w-52"><use href="#euca"/></svg>
 
     <div class="reveal">
-      <!-- Monograma arreglado para que no se rompa -->
+      <!-- Monograma de bienvenida corregido -->
       <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-gold-400/60 bg-white/60 sm:h-28 sm:w-28">
-        <span class="font-script text-[1.7rem] leading-none text-sage-700 sm:text-4xl whitespace-nowrap pb-1 pr-1">M &amp; D</span>
+        <span class="font-script text-[1.6rem] leading-none text-sage-700 sm:text-3xl whitespace-nowrap pt-1">M &amp; D</span>
       </div>
     </div>
 
@@ -365,9 +366,6 @@
   </div>
 </div>
 
-<!-- ==================================================================
-     🎵🎵🎵  AQUÍ VA TU MÚSICA — CAMBIA SOLO EL ATRIBUTO src  🎵🎵🎵
-     ================================================================== -->
 <audio id="audio" loop preload="metadata" src="secrets.mp3"></audio>
 
 <script>
@@ -393,15 +391,13 @@
     if (opened) return;
     opened = true;
 
-    // Intentar iniciar música (dentro del gesto del usuario)
     try {
       const p = audio.play();
       if (p && typeof p.catch === 'function') {
-        p.catch(function () { /* autoplay bloqueado, no pasa nada */ });
+        p.catch(function () { /* autoplay bloqueado */ });
       }
     } catch (e) { /* ignorar */ }
 
-    // Animación del sobre
     seal.style.opacity = '0';
     seal.style.transform = 'translate(-50%, -50%) scale(.4) rotate(-25deg)';
 
@@ -493,10 +489,6 @@
 
   audio.addEventListener('loadedmetadata', function () {
     timeLabel.textContent = formatTime(audio.currentTime);
-  });
-
-  audio.addEventListener('error', function () {
-    console.warn('No se pudo cargar el audio. Verifica la URL en <audio src="...">');
   });
 
   function seekFromEvent(clientX) {
