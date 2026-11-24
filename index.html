@@ -127,9 +127,14 @@
 <div id="mainContent" class="hidden">
 
   <!-- BIENVENIDA -->
-  <section class="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-5 py-20 text-center sm:px-6 sm:py-24">
+  <section class="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-5 py-16 text-center sm:px-6 sm:py-24">
     <svg class="pointer-events-none absolute -left-8 -top-6 w-32 rotate-180 text-sage-300/60 sm:w-52"><use href="#euca"/></svg>
     <svg class="pointer-events-none absolute -bottom-6 -right-8 w-32 text-sage-300/60 sm:w-52"><use href="#euca"/></svg>
+
+    <!-- IMAGEN DE LA PAREJA ARRIBA -->
+    <div class="reveal w-full max-w-[250px] sm:max-w-[320px] mb-4">
+      <img src="pareja.png" alt="Ilustración Marcial y Daniela" class="w-full h-auto object-contain drop-shadow-md" />
+    </div>
 
     <div class="reveal">
       <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-gold-400/60 bg-white/60 sm:h-28 sm:w-28">
@@ -153,15 +158,7 @@
       <span class="hidden h-px w-10 bg-gold-300 sm:block"></span>
     </div>
 
-    <div class="reveal mt-10 w-full max-w-[280px] sm:mt-12 sm:max-w-sm">
-      <div class="rounded-t-full rounded-b-2xl border border-gold-400/40 bg-sage-100 p-1.5 shadow-[0_30px_60px_-40px_rgba(47,58,30,.7)] sm:p-2">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
-             alt="Marcial y Daniela" loading="lazy"
-             class="h-[340px] w-full rounded-t-full rounded-b-xl object-cover sm:h-[440px]" />
-      </div>
-    </div>
-
-    <a href="#cuenta-regresiva" class="reveal mt-12 text-sage-400 transition hover:text-sage-600 sm:mt-14" aria-label="Desliza hacia abajo">
+    <a href="#cuenta-regresiva" class="reveal mt-10 text-sage-400 transition hover:text-sage-600 sm:mt-14" aria-label="Desliza hacia abajo">
       <svg class="float h-6 w-6 sm:h-7 sm:w-7"><use href="#i-arrow-down"/></svg>
     </a>
   </section>
@@ -214,6 +211,7 @@
           <svg class="h-5 w-5 sm:h-6 sm:w-6"><use href="#i-rings"/></svg>
         </div>
         <h3 class="mt-4 font-script text-3xl text-sage-700 sm:mt-5">Quinta La Lomita</h3>
+        <!-- Hora cambiada a 4:30 -->
         <p class="mt-2 font-sans text-[9px] uppercase tracking-[0.2em] text-gold-600 sm:text-[10px] sm:tracking-[0.25em]">Domingo 06 · 4:30 p.m.</p>
         <p class="mt-3 font-serif text-sm leading-relaxed text-ink/60">
           Te esperamos para celebrar juntos<br>el inicio de nuestra nueva vida.
@@ -237,6 +235,7 @@
       <ol class="reveal relative mt-10 sm:mt-12">
         <span class="absolute bottom-4 left-[15px] top-4 w-px bg-sage-300/70 sm:left-[19px]" aria-hidden="true"></span>
 
+        <!-- Hora de llegada cambiada a 16:30 (4:30 pm) -->
         <li class="relative flex gap-4 pb-8 sm:gap-5 sm:pb-9">
           <span class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sage-200 bg-white text-sage-600 shadow-sm sm:h-10 sm:w-10"><svg class="h-3.5 w-3.5 sm:h-4 sm:w-4"><use href="#i-glass"/></svg></span>
           <div class="pt-1">
@@ -244,6 +243,7 @@
             <p class="font-serif text-lg text-sage-800 sm:text-xl">Llegada de invitados</p>
           </div>
         </li>
+        <!-- El resto del itinerario se mantiene igual -->
         <li class="relative flex gap-4 pb-8 sm:gap-5 sm:pb-9">
           <span class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sage-200 bg-white text-sage-600 shadow-sm sm:h-10 sm:w-10"><svg class="h-3.5 w-3.5 sm:h-4 sm:w-4"><use href="#i-rings"/></svg></span>
           <div class="pt-1">
@@ -254,21 +254,21 @@
         <li class="relative flex gap-4 pb-8 sm:gap-5 sm:pb-9">
           <span class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sage-200 bg-white text-sage-600 shadow-sm sm:h-10 sm:w-10"><svg class="h-3.5 w-3.5 sm:h-4 sm:w-4"><use href="#i-heart"/></svg></span>
           <div class="pt-1">
-            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">17:30</p>
+            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">18:00</p>
             <p class="font-serif text-lg text-sage-800 sm:text-xl">Brindis y fotos</p>
           </div>
         </li>
         <li class="relative flex gap-4 pb-8 sm:gap-5 sm:pb-9">
           <span class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sage-200 bg-white text-sage-600 shadow-sm sm:h-10 sm:w-10"><svg class="h-3.5 w-3.5 sm:h-4 sm:w-4"><use href="#i-cutlery"/></svg></span>
           <div class="pt-1">
-            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">18:30</p>
+            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">19:00</p>
             <p class="font-serif text-lg text-sage-800 sm:text-xl">Cena</p>
           </div>
         </li>
         <li class="relative flex gap-4 pb-8 sm:gap-5 sm:pb-9">
           <span class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sage-200 bg-white text-sage-600 shadow-sm sm:h-10 sm:w-10"><svg class="h-3.5 w-3.5 sm:h-4 sm:w-4"><use href="#i-note"/></svg></span>
           <div class="pt-1">
-            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">20:00</p>
+            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 sm:text-[10px] sm:tracking-[0.3em]">20:30</p>
             <p class="font-serif text-lg text-sage-800 sm:text-xl">Primer baile</p>
           </div>
         </li>
@@ -309,7 +309,12 @@
         <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80" alt="Recuerdo 3" loading="lazy" class="h-24 w-full rounded-md object-cover sm:h-44 sm:rounded-lg" />
       </div>
 
-      <p class="reveal mt-10 font-script text-4xl text-cream sm:mt-14 sm:text-5xl">Marcial &amp; Daniela</p>
+      <!-- IMAGEN DE LOS ANILLOS AL FINAL -->
+      <div class="reveal mt-12 w-full max-w-[200px] sm:max-w-[280px] mx-auto opacity-80">
+        <img src="anillos.png" alt="Ilustración de anillos" class="w-full h-auto object-contain" />
+      </div>
+
+      <p class="reveal mt-6 font-script text-4xl text-cream sm:mt-8 sm:text-5xl">Marcial &amp; Daniela</p>
       <p class="reveal mt-1 font-sans text-[9px] uppercase tracking-[0.3em] text-cream/60 sm:mt-2 sm:text-[10px] sm:tracking-[0.4em]">06 · Diciembre · 2026</p>
       <p class="reveal mt-10 font-sans text-[8px] uppercase tracking-[0.2em] text-cream/35 sm:mt-12 sm:text-[9px] sm:tracking-[0.3em]">Diseñado con ♥ para nuestra boda · 2026</p>
     </div>
